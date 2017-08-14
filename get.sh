@@ -15,8 +15,6 @@ echo change the url to
 flv_url2=`echo $flv_url | sed -e "s/_[0..9]\{3\}.flv/.flv/g"`
 echo $flv_url2
 
-exit
-
 while true 
 do
     output=`date "+%s"`.flv
