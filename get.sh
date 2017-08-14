@@ -12,15 +12,15 @@ echo $flv_url
 #grep '_[0..9]\{3\}.flv'
 echo change the url to 
 
-flv_url2=`echo $flv_url | sed -e "s/_[0..9]\{3\}.flv/.flv/g"`
-echo $flv_url2
+#flv_url2=`echo $flv_url | sed -e "s/_[0..9]\{3\}.flv/.flv/g"`
+#echo $flv_url2
 
 i=0
 while true 
 do
     #output=`date "+%s"`.flv
     output=`date "+%F@%T"`.flv
-    wget -O $output $flv2_url
+    wget -O $output $flv_url
     let i=i+1
     if [ `wc -c < $output` == 0 ]; then
         rm $output
