@@ -9,7 +9,16 @@ fi
 flv_url=`xvfb-run ./node_modules/.bin/slimerjs netlog.js $1`
 echo $flv_url
 
+#grep '_[0..9]\{3\}.flv'
+echo change the url to 
+
+flv_url2=`echo $flv_url | sed -e "s/_[0..9]\{3\}.flv/.flv/g"`
+echo $flv_url2
+
+exit
+
 while true 
 do
-    wget -O 1.flv $flv_url
+    output=`date "+%s"`.flv
+    wget -O $output $flv2_url
 done

@@ -4,3 +4,4 @@ yum -y install http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1
 yum repolist | grep -i adobe
 yum install flash-plugin
 yum install xorg-x11-server-Xvfb
+yum install nodejs
