@@ -5,7 +5,8 @@ if [ "$1" == "" ]; then
     exit
 fi
 
-flv_url=`./node_modules/.bin/slimerjs netlog.js $1`
+#flv_url=`./node_modules/.bin/slimerjs netlog.js $1`
+flv_url=`xvfb-run ./node_modules/.bin/slimerjs netlog.js $1`
 echo $flv_url
 
 while true 
