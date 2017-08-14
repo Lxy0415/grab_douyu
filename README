@@ -1,0 +1,5 @@
+install
+yum install firefox
+yum -y install http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm
+yum repolist | grep -i adobe
+yum install flash-plugin
