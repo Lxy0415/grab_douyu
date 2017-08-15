@@ -1,0 +1,34 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version:0.17:$
+Arch:x86_64-gcc3:$
+
+[PLUGINS]
+librhythmbox-itms-detection-plugin.so:$
+/usr/lib64/mozilla/plugins/librhythmbox-itms-detection-plugin.so:$
+:$
+1411903761000:0:0:0:$
+This plug-in detects the presence of iTunes when opening iTunes Store URLs in a web page with Firefox.:$
+iTunes Application Detector:$
+1
+0:application/itunes-plugin:::$
+libgnome-shell-browser-plugin.so:$
+/usr/lib64/mozilla/plugins/libgnome-shell-browser-plugin.so:$
+:$
+1427477848000:0:0:0:$
+This plugin provides integration with Gnome Shell for live extension enabling and disabling. It can be used only by extensions.gnome.org:$
+Gnome Shell Integration:$
+1
+0:application/x-gnome-shell-integration:Gnome Shell Integration Dummy Content-Type::$
+libflashplayer.so:$
+/usr/lib64/flash-plugin/libflashplayer.so:$
+25.0.0.148:$
+1490381526000:0:0:0:$
+Shockwave Flash 25.0 r0:$
+Shockwave Flash:$
+2
+0:application/x-shockwave-flash:Shockwave Flash:swf:$
+1:application/futuresplash:FutureSplash Player:spl:$
+
+[INVALID]
