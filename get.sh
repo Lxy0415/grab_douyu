@@ -6,7 +6,7 @@ if [ "$1" == "" ]; then
 fi
 
 #flv_url=`./node_modules/.bin/slimerjs netlog.js $1`
-flv_url=`xvfb-run ./node_modules/.bin/slimerjs netlog.js $1`
+flv_url=`xvfb-run ./node_modules/.bin/slimerjs -P douyu netlog.js $1`
 echo $flv_url
 
 #grep '_[0..9]\{3\}.flv'
