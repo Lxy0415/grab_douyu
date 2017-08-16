@@ -1,31 +1,41 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-    echo usage: ./get.sh url
+    echo usage: ./get.sh roomid
     exit
 fi
 
-#flv_url=`./node_modules/.bin/slimerjs netlog.js $1`
-flv_url=`xvfb-run ./node_modules/.bin/slimerjs -P douyu netlog.js $1`
-echo $flv_url
+mkdir -p douyu/$1
+logfile="douyu/$1/log"
+touch $logfile
 
-#grep '_[0..9]\{3\}.flv'
-echo change the url to 
+log(){
+    echo `date "+%F %T"`"      " $* >> $logfile
+}
 
-#flv_url2=`echo $flv_url | sed -e "s/_[0..9]\{3\}.flv/.flv/g"`
-#echo $flv_url2
+#todo url test
+
+
+base_url="https://staticlive.douyucdn.cn/common/share/play.swf?room_id="
+room_url=$base_url$1
+log recording $room_url
+
+#flv_url=`./node_modules/.bin/slimerjs run.js $room_url`
+#flv_url=`xvfb-run ./node_modules/.bin/slimerjs -P douyu run.js $room_url`
+flv_url=`xvfb-run ./node_modules/.bin/slimerjs run.js $room_url`
+log get flv url $flv_url
 
 i=0
 while true 
 do
     #output=`date "+%s"`.flv
-    output=`date "+%F@%T"`.flv
+    output=douyu/$1/`date "+%F@%T"`.flv
     wget -O $output $flv_url
     let i=i+1
     if [ `wc -c < $output` == 0 ]; then
         rm $output
     else
-        echo $output start after $i trys
-        echo $output stop at `date "+%F %T"`
+        log $output start after $i trys
+        log $output stop at `date "+%F %T"`
     fi
 done

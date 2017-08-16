@@ -2,5 +2,6 @@
 
 while true 
 do
-    wget -O 1.flv $1
+    output=`date "+%F@%T"`.flv
+    wget -O $output $1
 done

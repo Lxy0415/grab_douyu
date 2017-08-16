@@ -14,3 +14,12 @@ orig='_[0..9]\{3\}.flv'
 #echo $1 | sed -e "s/_\d\d\d.flv/.flv/g"
 echo $1 | sed -e "s/_[0..9]\{3\}.flv/.flv/g"
 
+
+########################################
+
+#grep '_[0..9]\{3\}.flv'
+#echo change the url to 
+
+#flv_url2=`echo $flv_url | sed -e "s/_[0..9]\{3\}.flv/.flv/g"`
+#echo $flv_url2
+
